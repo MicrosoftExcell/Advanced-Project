@@ -25,7 +25,7 @@ Lists possible research questions.
 Outlines aims, potential dataset, questioning strategy as well as reasoning behind a crowdsourcing proposal to connect annotator demographics to the demographics mentioned in toxic comments.
 
 ## Meeting Notes
-Contains summaries of discussions held in supervisor meetings.
+Contains summaries of discussions held in supervisor meetings.\
 Goes over the week's progress, results, and aims for the next week.\
 Labelled by date, although some are missing due to continuing work from previous week and so having little to show/focused on coursework that week/did not make progress due to personal circumstances.
 
@@ -54,4 +54,80 @@ For each dataset discovered in the literature it contains:
 * Notes on data and its usefulness
 
 ## Code
-TBD - will update later after sorted repository
+Below are the Notebooks written for the project in order of creation.\
+The most up-to-date notebook with the most recent results is described last.
+
+### Data Analysis.ipynb
+Notebook used for preliminary analysis of datasets.
+
+* Looks at data
+* Merges related datasets into single DataFrame
+* Calculates mean attack, aggression and toxicity scores per comment
+* Finds overlap between related datasets
+* Displays useful statistics (annotations per comment, % toxic ratings, demographic information and toxicity scores related to demographic information)
+* Word clouds showing most frequent words in comments about men, women, black, and white people respectively
+
+### Word Clouds.ipynb
+Word clouds showing most frequent words in comments annotated by male and female annotators repsectively.
+
+### Autoencoder First Attempt.ipynb
+Unfinished attempt at building an autoencoder trained on only one class (very toxic data annotated by women) and then measuring the reconstruction error for other classes
+
+### Autoencoder.ipynb
+Final version of autoencoder using Keras embeddings.\
+Results not as expected. Reconstruction of sentences focused on the most frequent words in the comments such as 'article' and 'page'.\
+Poor results meant autoencoder not fit for intended purpose of measuring reconstruction error between classes.
+
+### First Classifier.ipynb
+Intitial application of BERT to dataset.
+
+### BERT_Classifier.ipynb
+Version 1 of the BERT classifier, trained and tested on toxic and non-toxic examples, not on a balanced dataset.\
+Gives confusion matrix and F1 score per batch.
+
+### BERT_Balanced.ipynb
+Version 2 of the BERT classifier, trained on balanced data for the below groups:
+
+* Female annotator, toxicity score -2
+* Male annotator, toxicity score -2
+* Female annotator, toxicity score -1
+* Male annotator, toxicity score -1
+* Female annotator, toxicity score 0
+* Male annotator, toxicity score 0
+* Female annotator, toxicity score 1
+* Male annotator, toxicity score 1
+* Female annotator, toxicity score 2
+* Male annotator, toxicity score 2
+
+Words "toxic"/"neutral"/"healthy" were appended to comments based on toxicity score.\
+The label was the gender of the annotator and gender predictions were tested for each of the 10 groups.
+
+### BERT_groups.ipynb
+Version 3 of the BERT classifier, trained on balanced data for the same 10 groups as above.\
+Same conditions as in BERT_Balanced.ipynb except the labels were the groups so the ability of the classifier to sort the comments into the groups was tested.
+
+### BERT_distributions.ipynb
+Version 4 of the BERT classifier.\
+Same as BERT_Balanced.ipynb except for the addition of graphs showing the distribution of the (male,female) values predicted by the classifier for the true positive and true negative cases.
+
+### Toxic_BERT.ipynb
+Version 5 of the BERT classifier.\
+Trained on balanced data for male/female annotators of toxic data.\
+The label was the gender of the annotator and gender predictions were tested for just the toxic data.\
+Results showed a bias towards predicting an annotator as male.
+
+### Neutral_BERT.ipynb
+Same concept as Toxic_BERT.ipynb, except for neutral data, again showing bias towards predicting an annotator as male.
+
+### Healthy_BERT.ipynb
+Same concept as Toxic_BERT.ipynb, except for healthy (positive/constructive) comments, again showing bias towards predicting an annotator as male.
+
+### Toxic_BERT_Gradients.ipynb
+Version 6 of the BERT classifier, building on Toxic_BERT.ipynb.\
+Addition of Captum library, using integrated gradients to visualise the words relied on for gender classification of annotators. (First attempt at this, dubious success).
+
+### Toxic_BERT_Sentiment.ipynb
+Version 7 of the BERT classifier.\
+Same goal as Toxic_BERT_Gradients.ipynb, but greater success in implementation.\
+Also added colour and notes to figures.\
+Most up-to-date version of code best displaying results of project investigation.
