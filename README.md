@@ -55,7 +55,7 @@ For each dataset discovered in the literature it contains:
 
 ## Code
 Below are the Notebooks written for the project in order of creation.\
-The most up-to-date notebook with the most recent results is described last.
+The notebooks containing the most recent results that are most influential to the project are described last (Toxic_BERT_Sentiment.ipynb, Male_Toxic_BERT.ipynb, Female_Toxic_BERT.ipynb).
 
 ### Data Analysis.ipynb
 Notebook used for preliminary analysis of datasets.
@@ -130,4 +130,17 @@ Addition of Captum library, using integrated gradients to visualise the words re
 Version 7 of the BERT classifier.\
 Same goal as Toxic_BERT_Gradients.ipynb, but greater success in implementation.\
 Also added colour and notes to figures.\
-Most up-to-date version of code best displaying results of project investigation.
+Displays results of application of integrated gradients for added explainability.\
+Highlights words in text that contributed strongly to male/female annotator prediction.
+
+### Male_Toxic_BERT.ipynb
+Version 8 of the BERT classifier.\
+Task to find agreeement between models trained on male/female data respectively.\
+This model was trained on balanced toxic/nontoxic data annotated by men.\
+The aim was to predict the toxicity of comments in different test groups.\
+Added offensive word analysis of test groups including word clouds.\
+Removed offensive words from comments and retested on pretrained model.
+
+### Female_Toxic_BERT.ipynb
+Female version of Male_Toxic_BERT.ipynb.\
+Aimed to gather same findings using model trained on female data.
