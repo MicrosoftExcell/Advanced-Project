@@ -55,7 +55,7 @@ For each dataset discovered in the literature it contains:
 
 ## Code
 Below are the Notebooks written for the project in order of creation.\
-The notebooks containing the most recent results that are most influential to the project are described last (Toxic_BERT_Sentiment.ipynb, Male_Toxic_BERT.ipynb, Female_Toxic_BERT.ipynb).
+The notebooks containing the most recent results that are most influential to the project are described last (Toxic_BERT_Sentiment.ipynb, Male_Toxic_BERT.ipynb, Female_Toxic_BERT.ipynb, Male_BERT_No_Offensive.ipynb, Female_BERT_No_Offensive.ipynb, Gender_BERT_No_Offensive.ipynb, Gender_BERT_No_Offensive_Just_Toxic.ipynb).
 
 ### Data Analysis.ipynb
 Notebook used for preliminary analysis of datasets.
@@ -144,3 +144,20 @@ Removed offensive words from comments and retested on pretrained model.
 ### Female_Toxic_BERT.ipynb
 Female version of Male_Toxic_BERT.ipynb.\
 Aimed to gather same findings using model trained on female data.
+
+### Male_BERT_No_Offensive.ipynb
+Version 9 of the BERT classifier.\
+This model was trained on balanced toxic/nontoxic data annotated by men, with all offensive words removed.\
+The aim was to predict the toxicity of comments in different test groups, comparing with the results from Male_Toxic_BERT.ipynb to see if offensive words are a key factor in prediction and to see which gender is better at using the context and semantics in the text now that the offensive words have been removed.
+
+### Female_BERT_No_Offensive.ipynb
+Female version of Male_BERT_No_Offensive, comparing results with Female_Toxic_BERT.ipynb.\
+Aimed to compare female and male model's adaptability to training data without offensive words.
+
+### Gender_BERT_No_Offensive.ipynb
+Version 10 of the BERT classifier, based on version 7 of the BERT classifier Toxic_BERT_Sentiment.ipynb.\
+Training data changed to remove offensive words for comments.\
+Predicting genders of annotators for test data with/without offensive words.
+
+### Gender_BERT_No_Offensive_Just_Toxic.ipynb
+Version of Gender_BERT_No_Offensive.ipynb using only toxic class (not very toxic class) as training data to see if affected gender predictions.
