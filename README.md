@@ -151,12 +151,12 @@ This model was trained on balanced toxic/nontoxic data annotated by men, with al
 The aim was to predict the toxicity of comments in different test groups, comparing with the results from Male_Toxic_BERT.ipynb to see if offensive words are a key factor in prediction and to see which gender is better at using the context and semantics in the text now that the offensive words have been removed.
 
 ### Female_BERT_No_Offensive.ipynb
-Female version of Male_BERT_No_Offensive, comparing results with Female_Toxic_BERT.ipynb.\
+Female version of Male_BERT_No_Offensive.ipynb, comparing results with Female_Toxic_BERT.ipynb.\
 Aimed to compare female and male model's adaptability to training data without offensive words.
 
 ### Gender_BERT_No_Offensive.ipynb
 Version 10 of the BERT classifier, based on version 7 of the BERT classifier Toxic_BERT_Sentiment.ipynb.\
-Training data changed to remove offensive words for comments.\
+Training data changed to remove offensive words in comments.\
 Predicting genders of annotators for test data with/without offensive words.
 
 ### Gender_BERT_No_Offensive_Just_Toxic.ipynb
