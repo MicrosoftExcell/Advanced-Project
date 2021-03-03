@@ -57,6 +57,12 @@ For each dataset discovered in the literature it contains:
 Below are the Notebooks written for the project in order of creation.\
 The notebooks containing the most recent results that are most influential to the project are described last (Toxic_BERT_Sentiment.ipynb, Male_Toxic_BERT.ipynb, Female_Toxic_BERT.ipynb, Male_BERT_No_Offensive.ipynb, Female_BERT_No_Offensive.ipynb, Gender_BERT_No_Offensive.ipynb, Gender_BERT_No_Offensive_Just_Toxic.ipynb).
 
+Link to dataset used: https://figshare.com/articles/dataset/Wikipedia_Talk_Labels_Toxicity/4563973
+
+Information on dataset: https://meta.wikimedia.org/wiki/Research:Detox/Data_Release
+
+List of offensive words used: https://www.cs.cmu.edu/~biglou/resources/
+
 ### Data Analysis.ipynb
 Notebook used for preliminary analysis of datasets.
 
@@ -130,6 +136,7 @@ Addition of Captum library, using integrated gradients to visualise the words re
 Version 7 of the BERT classifier.\
 Same goal as Toxic_BERT_Gradients.ipynb, but greater success in implementation.\
 Also added colour and notes to figures.\
+Includes correlation metrics and graphs for number of offensive words in comment vs gender of annotator.
 Displays results of application of integrated gradients for added explainability.\
 Highlights words in text that contributed strongly to male/female annotator prediction.
 
