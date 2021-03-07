@@ -136,7 +136,7 @@ Addition of Captum library, using integrated gradients to visualise the words re
 Version 7 of the BERT classifier.\
 Same goal as Toxic_BERT_Gradients.ipynb, but greater success in implementation.\
 Also added colour and notes to figures.\
-Includes correlation metrics and graphs for number of offensive words in comment vs gender of annotator.
+Includes correlation metrics and graphs for number of offensive words in comment vs gender of annotator.\
 Displays results of application of integrated gradients for added explainability.\
 Highlights words in text that contributed strongly to male/female annotator prediction.
 
