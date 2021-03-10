@@ -24,6 +24,12 @@ Lists possible research questions.
 ## Crowdsourcing Proposal
 Outlines aims, potential dataset, questioning strategy as well as reasoning behind a crowdsourcing proposal to connect annotator demographics to the demographics mentioned in toxic comments.
 
+## Lecture Presentation
+Slides for talk given during NLP lecture on project.
+
+## Sensitivity Results
+Sensitivity results for toxicity classification and sensitivity and specificity results for gender classification over different runs with different seed values.
+
 ## Meeting Notes
 Contains summaries of discussions held in supervisor meetings.\
 Goes over the week's progress, results, and aims for the next week.\
