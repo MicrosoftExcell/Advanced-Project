@@ -176,4 +176,4 @@ Predicting genders of annotators for test data with/without offensive words.
 Version of Gender_BERT_No_Offensive.ipynb using only toxic class (not very toxic class) as training data to see if affected gender predictions.
 
 ### Boxplots.ipynb
-Boxplots generated to present results across all runs of the above models in the paper.
+Box plots generated to present results across all runs of the above models in the paper.
