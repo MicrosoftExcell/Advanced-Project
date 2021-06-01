@@ -1,63 +1,10 @@
 # Advanced-Project
 Material for level 4 advanced project "Toxic Language Detection using Machine Learning"
 
-# Files
-
-## Project Diary
-Tracks project progress.\
-Contains a list of objectives completed and those to be completed alongside the date of the meeting the completed objective was discussed.
-
-## Project Plan
-From the beginning of the project.\
-Contains:
-* Project Description
-* Preliminary Preparation
-* Basic, Intermediate and Advanced Deliverables
-* Gantt Chart
-* References
-
-## List of Ideas
-Initial brainstorming of project focus.\
-Contains table of ideas, feasibility, potential datasets and current research on subject.\
-Lists possible research questions.
-
-## Crowdsourcing Proposal
-Outlines aims, potential dataset, questioning strategy as well as reasoning behind a crowdsourcing proposal to connect annotator demographics to the demographics mentioned in toxic comments.
-
-## Lecture Presentation
-Slides for talk given during NLP lecture on project.
-
-## Sensitivity Results
-Sensitivity results for toxicity classification and sensitivity and specificity results for gender classification over different runs with different seed values.
-
-## Meeting Notes
-Contains summaries of discussions held in supervisor meetings.\
-Goes over the week's progress, results, and aims for the next week.\
-Labelled by date, although some are missing due to continuing work from previous week and so having little to show/focused on coursework that week/did not make progress due to personal circumstances.
-
-## Literature
-### Literature Review
-Completed literature review from first term, examining papers in subject area.
-
-### Literature Notes
-Unstructured notes taken while reading literature for literature review.
-
-### Dataset Statistics
-For both datasets intended for use in project it contains:
-
-* Description of Dataset
-* Links to where it can be found/documentation/code where used
-* Research that used the dataset (contribution, findings, model, metrics)
-* Schema of Dataset
-* Analysis of Dataset (generated graphs and examined annotator demographics)
-
-### Dataset Summary
-For each dataset discovered in the literature it contains:
-
-* Name
-* Type of data
-* References
-* Notes on data and its usefulness
+## Preliminary Results
+Sensitivity results for toxicity classification.\
+Sensitivity and specificity results for gender classification.\
+Results taken over 5 runs using different seed values.
 
 ## Code
 Below are the Notebooks written for the project in order of creation.\
@@ -157,6 +104,10 @@ Removed offensive words from comments and retested on pretrained model.
 ### Female_Toxic_BERT.ipynb
 Female version of Male_Toxic_BERT.ipynb.\
 Aimed to gather same findings using model trained on female data.
+
+### MaleFemale_Toxic_BERT.ipynb
+Version of Male_Toxic_BERT.ipynb including male and female data for training.\
+Used as baseline for comparison.
 
 ### Male_BERT_No_Offensive.ipynb
 Version 9 of the BERT classifier.\
